@@ -8,6 +8,9 @@ class Node(Unit):
         self.outputEdges = []
 
     def unlink(self):
-        return
+        edges = self.edges
+
+        for i in edges:
+            i.unlink()
 
     
