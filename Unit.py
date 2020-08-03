@@ -1,4 +1,4 @@
-class Unit:         # noqa
+class Unit:
     def __init__(self, entity, properties):
         self.entity = entity
         self.properties = properties

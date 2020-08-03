@@ -1,6 +1,11 @@
-import Unit
+from Unit import Unit
 
 class Edge(Unit):
+    """
+        Parameters:
+            String entity: entity type (person for example)
+            Dic properties: entity properties
+    """
     def __init__(self, entity, properties):
         super().__init__(entity, properties)
         self.inputNode = None
