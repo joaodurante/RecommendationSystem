@@ -25,11 +25,10 @@ class Edge(Unit):
         """
         if direction <= 0:
             node.inputEdges.append(self)
-        elif direction >= 0:
-            node.output.append(self)
+        if direction >= 0:
+            node.outputEdges.append(self)
 
         node.edges.append(self)
-        return True
 
     def link(self, inputNode, outputNode, duplex):
         """
@@ -44,16 +43,16 @@ class Edge(Unit):
 
         self.inputNode = inputNode
         self.outputNode = outputNode
-        self.duplex = True
+        self.duplex = duplex
 
         if duplex:
             self._linkTo(inputNode, 0)
             self._linkTo(outputNode, 0)
-            return self
+            return
 
         self._linkTo(inputNode, 1)
         self._linkTo(outputNode, -1)
-        return self
+        return
 
     def setDistance(self, value):
         """
@@ -74,9 +73,9 @@ class Edge(Unit):
         """
         self.distance = 1 / value
 
-    def findOppositeNode(self, node):
+    def getOppositeNode(self, node):
         """ 
-            find the opposite node giving a starting node
+            get the opposite node giving a starting node
 
             Parameters:
                 node: starting node
