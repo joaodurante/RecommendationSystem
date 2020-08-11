@@ -13,6 +13,8 @@ views = dataHelper.getData('view')
 purchaseds = dataHelper.getData('purchased')
 belongs = dataHelper.getData('belongs')
 interesteds = dataHelper.getData('interested')
+distances = dataHelper.getConfig('distance')
+
 
 ### NODES ###
 # Persons #
@@ -45,3 +47,21 @@ belongsEdges = [ Edge('belongs', []).link(
 viewEdges = [ Edge('view', []).link(
     dataHelper.getNodeById(usersNodes, view['userId']), dataHelper.getNodeById(booksNodes, view['bookId']), False
 ) for view in views ]
+
+
+### SETTING EDGES DISTANCES ###
+# Purchased
+for i in purchasedEdges:
+    i.setDistance(distances['purchased'])
+
+# Interested
+for i in interestedEdges:
+    i.setDistance(distances['interested'])
+
+# Belongs
+for i in belongsEdges:
+    i.setDistance(distances['belongs'])
+
+# View
+for i in viewEdges:
+    i.setDistance(distances['view'])
