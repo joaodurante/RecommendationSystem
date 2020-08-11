@@ -48,11 +48,11 @@ class Edge(Unit):
         if duplex:
             self._linkTo(inputNode, 0)
             self._linkTo(outputNode, 0)
-            return
+            return self
 
         self._linkTo(inputNode, 1)
         self._linkTo(outputNode, -1)
-        return
+        return self
 
     def setDistance(self, value):
         """
@@ -61,7 +61,7 @@ class Edge(Unit):
             Parameters:
                 value: distance value
         """
-        self.distance = value or 0
+        self.distance = value
 
     
     def setWeight(self, value):

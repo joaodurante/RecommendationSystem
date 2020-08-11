@@ -65,3 +65,16 @@ for i in belongsEdges:
 # View
 for i in viewEdges:
     i.setDistance(distances['view'])
+
+### PRINT ###
+print("---- PURCHASED CONNECTIONS ----")
+dataHelper.printConection(purchasedEdges, 'name')
+
+print("\n\n---- INTERESTED CONNECTIONS ----")
+dataHelper.printConection(interestedEdges, 'name')
+
+print("\n\n---- BELONGS CONNECTIONS ----")
+dataHelper.printConection(belongsEdges, 'name')
+
+print("\n\n---- VIEW CONNECTIONS ----")
+dataHelper.printConection(viewEdges, 'name')
