@@ -1,12 +1,32 @@
 import json
+from model.Entity import Entity
 
 class DataHelper:
-    def getData(self, file):
+    def getNodeData(self, file):
         """
-            get data from a json file
+            get node data from a json file
 
             Parameters:
                 file: filename
+        """
+
+        with open('./data/{}.json'.format(file), 'r') as json_file:
+            try:
+                objs = []
+                data = json_file.read()
+                dic = json.loads(data)['data']
+                for i in dic:
+                    objs.append(Entity(i['id'], i['name']))
+                return objs
+            except Exception as e:
+                print(e)
+
+    def getEdgeData(self, file):
+        """
+            get edge data from a json file
+
+            Parameters:
+                file: filename 
         """
 
         with open('./data/{}.json'.format(file), 'r') as json_file:
