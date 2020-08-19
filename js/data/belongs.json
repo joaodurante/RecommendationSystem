@@ -19,6 +19,10 @@
         {
             "outputId": 5,
             "inputId": 2
+        },
+        {
+            "outputId": 6,
+            "inputId": 1
         }
     ]
 }

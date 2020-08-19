@@ -36,8 +36,7 @@ belongs.forEach(obj => {
     graph.createEdge('belongs')
         .link(
             graph.nodes('book').query().filter({ id: obj.outputId }).first(),
-            graph.nodes('genre').query().filter({ id: obj.inputId }).first(),
-            true
+            graph.nodes('genre').query().filter({ id: obj.inputId }).first()
         ).setDistance(2)
 })
 
@@ -46,7 +45,7 @@ graph.save('./graph.ugd', () => {
 })
 
 let results = graph.closest(
-    graph.nodes('user').query().filter({ id: 1 }).first(), 
+    graph.nodes('user').query().filter({ id: 3 }).first(), 
     {
         compare: node => { return node.entity === 'book' },
         minDepth: 2,
@@ -54,7 +53,23 @@ let results = graph.closest(
     }
 )
 
-let resultNodes = results.map(path => {
-    console.log(path)
-    // faz calculos
+res = []
+results.map(result => {
+    totalDistance = 0
+
+    result._raw.map(unit => {
+        if(unit.hasOwnProperty('distance')) {
+            totalDistance += unit.distance
+        }
+    })
+
+    obj = {
+        name: result._raw.pop().get('name'),
+        totalDistance: totalDistance,
+        totalWeight: 1 / totalDistance
+    }
+
+    res.push(obj)
 })
+
+console.log(res)
