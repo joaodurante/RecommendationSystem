@@ -1,28 +1,24 @@
 {
     "data": [
         {
-            "outputId": 1,
-            "inputId": 1
+            "userId": 1,
+            "bookId": 1
         },
         {
-            "outputId": 1,
-            "inputId": 2
+            "userId": 2,
+            "bookId": 2
         },
         {
-            "outputId": 2,
-            "inputId": 2
+            "userId": 2,
+            "bookId": 3
         },
         {
-            "outputId": 2,
-            "inputId": 3
+            "userId": 2,
+            "bookId": 4
         },
         {
-            "outputId": 2,
-            "inputId": 4
-        },
-        {
-            "outputId": 3,
-            "inputId": 5
+            "userId": 3,
+            "bookId": 5
         }
     ]
 }

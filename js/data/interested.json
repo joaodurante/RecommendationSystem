@@ -1,20 +1,20 @@
 {
     "data": [
         {
-            "outputId": 1,
-            "inputId": 1
+            "userId": 1,
+            "genreId": 1
         },
         {
-            "outputId": 2,
-            "inputId": 1
+            "userId": 2,
+            "genreId": 1
         },
         {
-            "outputId": 2,
-            "inputId": 2
+            "userId": 2,
+            "genreId": 2
         },
         {
-            "outputId": 3,
-            "inputId": 2
+            "userId": 3,
+            "genreId": 2
         }
     ]
 }

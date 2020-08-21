@@ -1,28 +1,28 @@
 {
     "data": [
         {
-            "outputId": 1,
-            "inputId": 1
+            "bookId": 1,
+            "genreId": 1
         },
         {
-            "outputId": 2,
-            "inputId": 1
+            "bookId": 2,
+            "genreId": 1
         },
         {
-            "outputId": 3,
-            "inputId": 2
+            "bookId": 3,
+            "genreId": 2
         },
         {
-            "outputId": 4,
-            "inputId": 2
+            "bookId": 4,
+            "genreId": 2
         },
         {
-            "outputId": 5,
-            "inputId": 2
+            "bookId": 5,
+            "genreId": 2
         },
         {
-            "outputId": 6,
-            "inputId": 1
+            "bookId": 6,
+            "genreId": 1
         }
     ]
 }
