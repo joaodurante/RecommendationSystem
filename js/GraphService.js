@@ -6,10 +6,13 @@ class GraphService {
         this.graph = new ug.Graph()
         this.dh = new DataHelper()
 
-        // load graph file if exists else create it
+        // load the graph
         this._loadGraph()
     }
 
+    /**
+     * try to load graph if graph file exists, if not load data from .json files then create graph units
+     */
     _loadGraph = () => {
         this.graph.load('./graphfile.ugd', (err) => {
             if(err) {
@@ -28,17 +31,23 @@ class GraphService {
                 this._createEdges()
 
                 // save graph file
-                this._saveGraph()
+                this._saveGraph('graphfile.ugd')
             }
         })
     }
 
+    /**
+     * create graph nodes using recorded data
+     */
     _createNodes = () => {
         this.users.forEach(obj => this.graph.createNode('user', obj))
         this.books.forEach(obj => this.graph.createNode('book', obj))
         this.genres.forEach(obj => this.graph.createNode('genre', obj))
     }
 
+    /**
+     * create graph edges using recorded data
+     */
     _createEdges = () => {
         this.purchased.forEach(obj => {
             this.graph.createEdge('purchased')
@@ -68,26 +77,34 @@ class GraphService {
         })
     }
 
-    _saveGraph = () => {
-        this.graph.save('graphfile.ugd', (err) => {
+    /**
+     * save graph file
+     * @param {String} filename filename
+     */
+    _saveGraph = (filename) => {
+        this.graph.save(filename, (err) => {
             if(err)
                 console.log(err)
         })
     }
 
+    /**
+     * get books recommendations based on userId received as param
+     * @param userId user id
+     * @returns array containing books informations and weights
+     */
     getRecommendation = (userId) => {
         const res = []
-
-        const results = this.graph.closest(
-            this.graph.nodes('user').query().filter({ id: userId }).first(), 
+        const results = this.graph.closest(                                             // get the closest paths from user to books
+            this.graph.nodes('user').query().filter({ id: userId }).first(),            // query 'user' nodes using userId received as param
             {
                 compare: node => { return node.entity === 'book' },                     // function containing a comparison constraint for the node
                 minDepth: 2,                                                            // minimum distance from our target
                 direction: 1                                                            // Which direction can we traverse the graph in (-1 incoming nodes, 0 both, 1 outgoing nodes)
             }
         )
-        
-        results.map(result => {
+
+        results.map(result => {                                                         // run the Paths array to compute the distances and weights of user and books
             let totalDistance = 0
         
             result._raw.map(unit => {
@@ -102,7 +119,7 @@ class GraphService {
                 totalWeight: 1 / totalDistance
             })
         })
-        console.log(res)
+        return(res)
     }
 }
 

@@ -1,7 +1,14 @@
 const server = require('express')
-const GraphService = require('./GraphService')
-
-
+const bodyParser = require('body-parser')
+const routes = require('./routes')
 const app = new server()
-const gs = new GraphService()
+
+
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.json())
+app.use(routes)
+
+app.listen(8000, () => {
+    console.log(`Server is listening at port 8000`)
+})
 
