@@ -2,11 +2,23 @@
     "data": [
         {
             "id": 1,
-            "name": "Sci-Fi"
+            "name": "Fantasia"
         },
         {
             "id": 2,
             "name": "Romance"
+        },
+        {
+            "id": 3,
+            "name": "Mistério"
+        },
+        {
+            "id": 4,
+            "name": "Biografia"
+        },
+        {
+            "id": 5,
+            "name": "HQ"
         }
     ]
 }

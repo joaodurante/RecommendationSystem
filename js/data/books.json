@@ -2,27 +2,64 @@
     "data": [
         {
             "id": 1,
-            "name": "Harry Potter"
+            "name": "Harry Potter e a Pedra Filosofal",
+            "imgUrl": "https://upload.wikimedia.org/wikipedia/pt/c/c1/Capa_HP1.jpg"
         },
         {
             "id": 2,
-            "name": "Percy Jackson"
+            "name": "Harry Potter e a Câmara Secreta",
+            "imgUrl": "https://upload.wikimedia.org/wikipedia/pt/9/97/Capa_HP2.jpg"
         },
         {
             "id": 3,
-            "name": "City of Paper"
+            "name": "Clube da Luta",
+            "imgUrl": "https://upload.wikimedia.org/wikipedia/pt/f/f1/Fight_Club_novel_cover.jpg"
         },
         {
             "id": 4,
-            "name": "Who are you Alaska?"
+            "name": "Maus",
+            "imgUrl": "https://upload.wikimedia.org/wikipedia/pt/9/98/Maus.jpg"
         },
         {
             "id": 5,
-            "name": "Bras Cubas"
+            "name": "Batman",
+            "imgUrl": "https://upload.wikimedia.org/wikipedia/pt/5/53/Batman_%28revista_em_quadrinhos%29.jpg"
+            
         },
         {
             "id": 6,
-            "name": "Lord of the rings"
+            "name": "Steve Jobs",
+            "imgUrl": "https://upload.wikimedia.org/wikipedia/en/e/e4/Steve_Jobs_by_Walter_Isaacson.jpg"
+        },
+        {
+            "id": 7,
+            "name": "À procura de Alaska",
+            "imgUrl": "https://upload.wikimedia.org/wikipedia/en/3/3e/Looking_for_Alaska_original_cover.jpg"
+        },
+        {
+            "id": 8,
+            "name": "O Assassinato de Roger Ackroyd",
+            "imgUrl": "https://upload.wikimedia.org/wikipedia/en/5/57/The_Murder_of_Roger_Ackroyd_First_Edition_Cover_1926.jpg"
+        },
+        {
+            "id": 9,
+            "name": "O mistério do comboio azul",
+            "imgUrl": "https://upload.wikimedia.org/wikipedia/en/1/14/The_Mystery_of_the_Blue_Train_First_Edition_Cover_1928.jpg"
+        },
+        {
+            "id": 10,
+            "name": "Objetos Cortantes",
+            "imgUrl": "https://upload.wikimedia.org/wikipedia/en/d/dc/Sharp-objects-book-cover.jpg"
+        },
+        {
+            "id": 11,
+            "name": "Longa Caminhada Até a Liberdade",
+            "imgUrl": "https://en.wikipedia.org/wiki/Long_Walk_to_Freedom#/media/File:Long_Walk_to_Freedom.jpg"
+        },
+        {
+            "id": 12,
+            "name": "O Nome do Vento",
+            "imgUrl": "https://upload.wikimedia.org/wikipedia/en/5/56/TheNameoftheWind_cover.jpg"
         }
     ]
 }
