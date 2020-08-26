@@ -5,6 +5,10 @@
             "genreId": 1
         },
         {
+            "userId": 1,
+            "genreId": 3
+        },
+        {
             "userId": 2,
             "genreId": 1
         },
@@ -13,8 +17,20 @@
             "genreId": 2
         },
         {
+            "userId": 2,
+            "genreId": 4
+        },
+        {
             "userId": 3,
-            "genreId": 2
+            "genreId": 3
+        },
+        {
+            "userId": 3,
+            "genreId": 4
+        },
+        {
+            "userId": 3,
+            "genreId": 5
         }
     ]
 }

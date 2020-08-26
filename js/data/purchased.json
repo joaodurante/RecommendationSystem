@@ -5,20 +5,48 @@
             "bookId": 1
         },
         {
-            "userId": 2,
-            "bookId": 2
-        },
-        {
-            "userId": 2,
+            "userId": 1,
             "bookId": 3
         },
         {
+            "userId": 1,
+            "bookId": 10
+        },
+        {
+            "userId": 1,
+            "bookId": 12
+        },
+        {
             "userId": 2,
-            "bookId": 4
+            "bookId": 1
+        },
+        {
+            "userId": 2,
+            "bookId": 7
+        },
+        {
+            "userId": 2,
+            "bookId": 6
         },
         {
             "userId": 3,
             "bookId": 5
+        },
+        {
+            "userId": 3,
+            "bookId": 6
+        },
+        {
+            "userId": 3,
+            "bookId": 8
+        },
+        {
+            "userId": 3,
+            "bookId": 9
+        },
+        {
+            "userId": 3,
+            "bookId": 12
         }
     ]
 }

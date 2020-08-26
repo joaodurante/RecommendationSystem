@@ -1,0 +1,71 @@
+-- USERS --
+    Joao(1)
+        PURCHASED: ['Harry Potter PF(1)', 'Clube da Luta(3)', 'Objetos Cortantes(10)', 'O Nome do Vento(12)']
+        INTERESTED: ['Fantasia(1)', 'Misterio(3)']
+        
+    Caroline(2)
+        PURCHASED: ['Harry Potter PF(1)', 'A procura de Alaska(7)', 'Steve Jobs(6)']
+        INTERESTED: ['Fantasia(1)', 'Romance(2)', 'Biografia(4)']
+        
+    Guilherme(3)
+        PURCHASED: ['Batman(5)', 'Steve Jobs(6)', 'O Assassinato de Roger Ackroyd(8)', 'O mistério do comboio azul(9), 'Longa Caminhada Até a Liberdade(11)']
+        INTERESTED: ['Misterio(3)', 'Biografia(4)', 'HQ(5)']
+
+-- BOOKS --
+    Harry Potter e a Pedra Filosofal(1)
+        BELONGS: ['Fantasia(1)', 'Romance(2)']
+
+    Harry Potter e a Câmara Secreta(2)
+        BELONGS: ['Fantasia(1)', 'Romance(2)']
+
+    Clube da Luta(3)
+        BELONGS: ['Romance(2)']
+
+    Maus(4)
+        BELONGS: ['HQ(5)']
+
+    Batman(5)
+        BELONGS: ['HQ(5)']
+
+    Steve Jobs(6)
+        BELONGS: ['Biografia(4)']
+
+    À procura de Alaska(7)
+        BELONGS: ['Romance(2)']
+
+    O Assassinato de Roger Ackroyd(8)
+        BELONGS: ['Misterio(3)']
+
+    O mistério do comboio azul(9)
+        BELONGS: ['Misterio(3)']
+
+    Objetos Cortantes(10)
+        BELONGS: ['Misterio(3)']
+
+    Longa Caminhada Até a Liberdade(11)
+        BELONGS: ['Biografia(4)']
+
+    O Nome do Vento(12)
+        BELONGS: ['Fantasia(1)', 'Romance(2)']
+
+
+-- GENRES --
+    Fantasia(1)
+        BELONGS: ['Harry Potter e a Pedra Filosofal(1)', 'Harry Potter e a Câmara Secreta(2)', 'O Nome do Vento(12)']
+        INTERESTED: ['Joao(1)', 'Caroline(2)']
+
+    Romance(2)
+        BELONGS: ['Harry Potter e a Pedra Filosofal(1)', 'Harry Potter e a Câmara Secreta(2)', 'Clube da Luta(3)', 'À procura de Alaska(7)', 'O Nome do Vento(12)']
+        INTERESTED: ['Caroline(2)']
+
+    Misterio(3)
+        BELONGS: ['O Assassinato de Roger Ackroyd(8)', 'O mistério do comboio azul(9)', 'Objetos Cortantes(10)']
+        INTERESTED: ['Joao(1)', 'Guilherme(3)']
+
+    Biografia(4)
+        BELONGS: ['Steve Jobs(6)', 'Longa Caminhada Até a Liberdade(11)']
+        INTERESTED: ['Caroline(2)', 'Guilherme(3)']
+
+    HQ(5)
+        BELONGS: ['Maus(4)', 'Batman(5)']
+        INTERESTED: ['Guilherme(3)']
