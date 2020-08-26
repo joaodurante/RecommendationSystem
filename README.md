@@ -1,8 +1,10 @@
 # AI-Project
 Recommendation engine using Graphs
 
+
 ## Requirements
 * NodeJS and NPM
+
 
 ## Getting started
 1. Clone the repository
@@ -19,6 +21,7 @@ npm install
 ```bash
 node index.js
 ```
+
 
 ## Usage
 * To get book recommendations use the following endpoint - *http://localhost:8000/{user-id}*
