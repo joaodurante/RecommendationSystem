@@ -1,5 +1,5 @@
 const ug = require('ug')
-const DataHelper = require('./DataHelper')
+const DataHelper = require('./helpers/DataHelper')
 
 class GraphService {
     constructor() {
@@ -40,15 +40,16 @@ class GraphService {
      * create graph nodes using recorded data
      */
     _createNodes = () => {
-        this.users.forEach(obj => this.graph.createNode('user', obj))
-        this.books.forEach(obj => this.graph.createNode('book', obj))
-        this.genres.forEach(obj => this.graph.createNode('genre', obj))
+        this.users.forEach(obj => this.graph.createNode('user', obj))                       // create users nodes
+        this.books.forEach(obj => this.graph.createNode('book', obj))                       // create books nodes
+        this.genres.forEach(obj => this.graph.createNode('genre', obj))                     // create genres nodes
     }
 
     /**
      * create graph edges using recorded data
      */
     _createEdges = () => {
+        // create purchased edges
         this.purchased.forEach(obj => {
             this.graph.createEdge('purchased')
                 .link(
@@ -58,6 +59,7 @@ class GraphService {
                 ).setDistance(1)
         })
         
+        // create interested edges
         this.interested.forEach(obj => {
             this.graph.createEdge('interested')
                 .link(
@@ -67,6 +69,7 @@ class GraphService {
                 ).setDistance(2)
         })
         
+        // create belongs edges
         this.belongs.forEach(obj => {
             this.graph.createEdge('belongs')
                 .link(
