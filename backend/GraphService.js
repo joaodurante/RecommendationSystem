@@ -115,11 +115,13 @@ class GraphService {
                     totalDistance += unit.distance
                 }
             })
-        
+            
+            let elem = result._raw.pop()
             res.push({
-                name: result._raw.pop().get('name'),
+                name: elem.get('name'),
                 totalDistance: totalDistance,
-                totalWeight: 1 / totalDistance
+                totalWeight: 1 / totalDistance,
+                imgUrl: elem.get('imgUrl')
             })
         })
         return(res)
