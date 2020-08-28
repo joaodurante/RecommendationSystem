@@ -7,21 +7,43 @@ Recommendation engine using Graphs
 
 
 ## Getting started
-1. Clone the repository
+Clone the repository
 ```bash
 git clone https://github.com/joaodurante/AI-Project.git
 ```
 
-2. Inside the repository folder, install the dependencies
+### Backend
+1. Move to backend folder
+```bash
+cd backend
+```
+
+2. Install the dependencies
 ```bash
 npm install
 ```
 
-3. Start the node server
+2. Start the node server
 ```bash
 node index.js
 ```
 
+### Frontend
+1. Move to frontend folder
+```bash
+cd frontend
+```
 
-## Usage
+2. Install the dependencies
+```bash
+npm install
+```
+
+3. Start 
+```bash
+npm start
+```
+
+
+## API Endpoints
 * To get book recommendations use the following endpoint - *http://localhost:8000/{user-id}*
