@@ -14,14 +14,13 @@ function Form() {
 
 
     return (
-        <div>
+        <div className="user-form">
             <form onSubmit={getRecommendation}>
                 <label>
-                    Username:<br/>
-                    <input type="text" value={user} onChange={e => setUser(e.target.value)} /><br/>
+                    <input type="text" value={user} onChange={e => setUser(e.target.value)} placeholder="Username"/><br/>
                 </label>
                 
-                <input type="submit" value="Submit"/>
+                <button type="submit">Submit</button>
             </form>
 
             <Books username={username}/>

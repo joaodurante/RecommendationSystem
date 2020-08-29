@@ -17,18 +17,25 @@ function Books(props) {
 
 
     return (
-        <div>
+        <div className="books-list">
             {recommendations.length > 0 ? (
-                <ul>
-                    {recommendations.map(item => 
-                        <li key={item.name}>
-                            <img src={item.imgUrl} alt={item.name} />
-                            <p>{item.name}</p>
-                            <p>{item.totalWeight}</p>
-                        </li>
-                    )}
-                </ul>
-            ) : console.log('empty')}
+                <div>
+                    <h3 className="books-title">Livros recomendados</h3>
+                    <ul>
+                        {recommendations.map(item => 
+                            <li key={item.name}>
+                                <img src={item.imgUrl} alt={item.name} />
+                                <p>{item.name}</p>
+                                <p>Weight: {item.totalWeight}</p>
+                            </li>
+                        )}
+                    </ul>
+                </div>
+            ) : (
+                <div className="empty">
+                    <h3>There is no books to show</h3>
+                </div>
+            )}
         </div>
     )
 }

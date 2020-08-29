@@ -1,3 +1,76 @@
 ul {
-    list-style-type: none;
+    list-style: none;
+    display: grid;
+    padding: 5px;
+    grid-template-columns: repeat(8, 1fr);
+    height: 300px;
+}
+
+li {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 2px rgba(0,0,0,0,0.05);
+    background-color: #FFF;
+    border-radius: 5px 5px 0 0;
+    padding: 10px;
+    color: #444444;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+li:hover {
+    transform: translateY(-5px);
+    transition: all .2s;
+}
+
+img {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+}
+
+form input{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    height: 48px;
+    padding: 0 20px;
+    font-size: 16px;
+    color: #666;
+}
+
+form button{
+    border: 0;
+    border-radius: 4px;
+    margin-left: 10px;
+    height: 48px;
+    padding: 0 20px;
+    font-size: 16px;
+    color: #FFF;
+    background-color: #646464;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #444444;
+    transition: all .2s;
+}
+
+.user-form {
+    margin-top: 50px;
+}
+
+.books-list {
+    margin-top: 40px;
+}
+
+.home {
+    margin-left: 40px;
+    margin-right: 40px;
 }
