@@ -1,4 +1,4 @@
-# AI-Project
+# Books Recommendation System
 Recommendation engine using Graphs
 
 
@@ -47,3 +47,8 @@ npm start
 
 ## API Endpoints
 * To get book recommendations use the following endpoint - *http://localhost:8000/{user-id}*
+
+## Built with
+* NodeJS
+* React
+* UnitGraph
