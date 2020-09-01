@@ -33,7 +33,7 @@ function Books(props) {
                 </div>
             ) : (
                 <div className="empty">
-                    <h3>There is no books to show</h3>
+                    <h3>Não temos nenhuma recomendação por enquanto</h3>
                 </div>
             )}
         </div>

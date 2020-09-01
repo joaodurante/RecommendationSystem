@@ -25,7 +25,7 @@ npm install
 
 2. Start the node server
 ```bash
-node index.js
+npm start
 ```
 
 ### Frontend
